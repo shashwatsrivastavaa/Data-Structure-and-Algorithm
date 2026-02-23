@@ -1,0 +1,16 @@
+
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if (root == NULL) {
+            return 0;
+        }
+
+        int leftsubtree = maxDepth(root->left);
+        int rightsubtree = maxDepth(root->right);
+
+        int d = max(leftsubtree, rightsubtree) + 1;
+
+        return d;
+    }
+};
