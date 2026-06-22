@@ -13,12 +13,10 @@ class Solution {
             if (need < 0) {
                 need += k;
             }
-          
             if (map.containsKey(need)) {
                 count += map.get(need);
             }
             map.put(need, map.getOrDefault(need, 0) + 1);
-
         }
         return count;
 
