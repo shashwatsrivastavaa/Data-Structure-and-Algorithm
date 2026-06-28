@@ -9,14 +9,14 @@ class Solution {
             if (nums[right] == 0) {
                 count++;
             }
-            while (count > k) {
-                if (nums[left] == 0) {
+            if(count > k) {
+                if (nums[left] == 0) 
                     count--;
-                }
-                left++;
+                    left++;
             }
+            if(count<=k){
             currlen = right - left + 1;
-            maxlength = Math.max(maxlength, currlen);
+            maxlength = Math.max(maxlength, currlen);}
             right++;
 
         }
